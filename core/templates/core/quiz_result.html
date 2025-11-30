@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Results for {{ topic.title }}</h2>
+<p>You scored {{ score }} out of {{ total }}.</p>
+<a href="{% url 'core:topic-detail' topic.pk %}">Back to topic</a>
+{% endblock %}

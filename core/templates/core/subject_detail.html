@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ subject.title }}</h1>
+<p>{{ subject.description }}</p>
+<h3>Topics</h3>
+<ul>
+  {% for t in subject.topics.all %}
+    <li><a href="{% url 'core:topic-detail' t.pk %}">{{ t.title }}</a></li>
+  {% endfor %}
+</ul>
+{% endblock %}

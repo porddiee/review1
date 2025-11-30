@@ -1,0 +1,12 @@
+<!-- templates/core/subject_list.html -->
+{% extends "base.html" %}
+{% block content %}
+<h1>Subjects</h1>
+<ul>
+  {% for s in subjects %}
+    <li><a href="{% url 'core:subject-detail' s.slug %}">{{ s.title }}</a></li>
+  {% empty %}
+    <li>No subjects yet.</li>
+  {% endfor %}
+</ul>
+{% endblock %}

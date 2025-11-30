@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ topic.title }}</h1>
+<p>{{ topic.description }}</p>
+<a href="{% url 'core:start-quiz' topic.pk %}">Start Quiz (10 questions)</a>
+{% endblock %}
